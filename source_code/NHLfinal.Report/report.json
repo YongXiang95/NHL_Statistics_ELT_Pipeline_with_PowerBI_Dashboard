@@ -1,0 +1,312 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY25SU12",
+            "path": "BaseThemes/CY25SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Most improved ",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "04c940e4b70feceacc6c",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2d099f30193603152eeb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":0,\"z\":0,\"width\":190.8676094027544,\"height\":455.43657293132486,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 455.44,
+          "width": 190.87,
+          "x": 9.45,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8afda4d9b8d42f7e14be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":869.6428571428571,\"y\":419.6428571428571,\"z\":4000,\"width\":307.1428571428571,\"height\":221.42857142857142,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.Measure\"},{\"queryRef\":\"fact_skater_stats_per_60.Fullname\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Pct change in goals_per_60\"},\"Name\":\"fact_skater_stats_per_60.Measure\",\"NativeReferenceName\":\"Pct change in goals_per_60\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 221.43,
+          "width": 307.14,
+          "x": 869.64,
+          "y": 419.64,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"a9ad89441f6b9ad4dd48\",\"layouts\":[{\"id\":0,\"position\":{\"x\":252.87222047651613,\"y\":0,\"z\":3000,\"width\":528.4575146485278,\"height\":392.17907247555496,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_skater_stats_per_60.goals_per_60)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0},\"Name\":\"Sum(fact_skater_stats_per_60.goals_per_60)\",\"NativeReferenceName\":\"Sum of goals_per_60\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{\"responsive\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"visualTooltip\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Default'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_skater_stats_per_60\"}},\"Property\":\"Fullname\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 392.18,
+          "width": 528.46,
+          "x": 252.87,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"dd5365eb093894626c3e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":200.3165009573462,\"y\":419.53078502387604,\"z\":2000,\"width\":617.9575076703038,\"height\":209.76539251193802,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}],\"Series\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\"}],\"Y\":[{\"queryRef\":\"fact_skater_stats_per_60.Percentage Change by CombinedYear\"}],\"Tooltips\":[{\"queryRef\":\"fact_skater_stats_per_60.Percentage Change by CombinedYear2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Count of Fullname\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Percentage Change by CombinedYear\"},\"Name\":\"fact_skater_stats_per_60.Percentage Change by CombinedYear\",\"NativeReferenceName\":\"Percentage Change by CombinedYear\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Percentage Change by CombinedYear2\"},\"Name\":\"fact_skater_stats_per_60.Percentage Change by CombinedYear2\",\"NativeReferenceName\":\"Percentage Change by CombinedYear2\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Pct Change of goals_per_60 by Year '\"}}}}}]}}}",
+          "filters": "[{\"name\":\"ac25772d04dee0da5b38\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_skater_stats_per_60\"}},\"Property\":\"Fullname\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'David Pastrnak'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"requireSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 209.77,
+          "width": 617.96,
+          "x": 200.32,
+          "y": 419.53,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"f36ae5074ccbc86a1eff\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":500.79125239336554,\"z\":1000,\"width\":200.3165009573462,\"height\":181.4187178481626,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'20152016'\"}}],[{\"Literal\":{\"Value\":\"'20162017'\"}}],[{\"Literal\":{\"Value\":\"'20172018'\"}}],[{\"Literal\":{\"Value\":\"'20182019'\"}}],[{\"Literal\":{\"Value\":\"'20192020'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 181.42,
+          "width": 200.32,
+          "x": 0.00,
+          "y": 500.79,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"59aa37edab1aad1a7431\",\"target\":\"58e50c26665385921fee\",\"type\":1}]}",
+      "displayName": "top players goal rates",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "57663b4ad1db49a06e07",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0ff38ae5c525a21b085a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":24.22727860852849,\"y\":487.5739819966359,\"z\":3000,\"width\":252.87222047651613,\"height\":171.10515517273248,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'20152016'\"}}],[{\"Literal\":{\"Value\":\"'20162017'\"}}],[{\"Literal\":{\"Value\":\"'20172018'\"}}],[{\"Literal\":{\"Value\":\"'20182019'\"}}],[{\"Literal\":{\"Value\":\"'20192020'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 171.11,
+          "width": 252.87,
+          "x": 24.23,
+          "y": 487.57,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"20e8e5ecc2412ea86f9b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":252.87222047651613,\"y\":0,\"z\":1000,\"width\":443.662039518678,\"height\":360.38076930186133,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_skater_stats_per_60.goals_per_60)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0},\"Name\":\"Sum(fact_skater_stats_per_60.goals_per_60)\",\"NativeReferenceName\":\"Sum of goals_per_60\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{\"responsive\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"visualTooltip\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Default'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_skater_stats_per_60\"}},\"Property\":\"Fullname\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 360.38,
+          "width": 443.66,
+          "x": 252.87,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"37218a527965f96c0ede\",\"layouts\":[{\"id\":0,\"position\":{\"x\":717.7331287776566,\"y\":363.40917912792736,\"z\":4000,\"width\":437.6052198665459,\"height\":307.38359734570525,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_skater_stats_per_60.goals_per_60)\"}],\"Series\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\"}],\"Tooltips\":[{\"queryRef\":\"Sum(fact_skater_stats_per_60.total_goals)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0},\"Name\":\"Sum(fact_skater_stats_per_60.goals_per_60)\",\"NativeReferenceName\":\"Sum of goals_per_60\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"total_goals\"}},\"Function\":0},\"Name\":\"Sum(fact_skater_stats_per_60.total_goals)\",\"NativeReferenceName\":\"Sum of total_goals\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Goals_per_60 by season'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_skater_stats_per_60\"}},\"Property\":\"Fullname\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 307.38,
+          "width": 437.61,
+          "x": 717.73,
+          "y": 363.41,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"58e50c26665385921fee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":292.91563819234585,\"y\":377.9556621836721,\"z\":2000,\"width\":425.2001199566311,\"height\":292.91563819234585,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(fact_skater_stats_per_60.shots_per_60)\"}],\"Category\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}],\"Series\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"shots_per_60\"}},\"Function\":0},\"Name\":\"Sum(fact_skater_stats_per_60.shots_per_60)\",\"NativeReferenceName\":\"Sum of shots_per_60\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Shots_per_60 by season'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_skater_stats_per_60\"}},\"Property\":\"Fullname\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"shots_per_60\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 292.92,
+          "width": 425.20,
+          "x": 292.92,
+          "y": 377.96,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"59aa37edab1aad1a7431\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.599434391231215,\"y\":10.599434391231215,\"z\":0,\"width\":178.67617973789763,\"height\":454.2614739099092,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 454.26,
+          "width": 178.68,
+          "x": 10.60,
+          "y": 10.60,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c8055b487ced81cc3b8a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":719.2473336906896,\"y\":21.19886878246243,\"z\":5000,\"width\":436.09101495351285,\"height\":339.1819005193989,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"fact_skater_stats_per_60.Goalvsshots\"}],\"Category\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}],\"Series\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Goalvsshots\"},\"Name\":\"fact_skater_stats_per_60.Goalvsshots\",\"NativeReferenceName\":\"Goalvsshots\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Goal vs shots by season'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_skater_stats_per_60\"}},\"Property\":\"Fullname\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"goals_per_60\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 339.18,
+          "width": 436.09,
+          "x": 719.25,
+          "y": 21.20,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "skater_overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d17696f3a841cdc10eed",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3fa045d7a5a257c93dea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":354.135767256132,\"y\":524.99714774672,\"z\":1000,\"width\":175.97261836851112,\"height\":186.19509412435823,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.primaryPosition\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"primaryPosition\"},\"Name\":\"fact_skater_stats_per_60.primaryPosition\",\"NativeReferenceName\":\"Primary Position\"}]},\"columnProperties\":{\"fact_skater_stats_per_60.primaryPosition\":{\"displayName\":\"Primary Position\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 186.20,
+          "width": 175.97,
+          "x": 354.14,
+          "y": 525.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"454c7f2aba43dd3f4d16\",\"layouts\":[{\"id\":0,\"position\":{\"x\":984.278379920137,\"y\":525.7273245864232,\"z\":7000,\"width\":175.97261836851112,\"height\":154.06731317741014,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.home_team_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"home_team_name\"},\"Name\":\"fact_skater_stats_per_60.home_team_name\",\"NativeReferenceName\":\"Home Team\"}]},\"columnProperties\":{\"fact_skater_stats_per_60.home_team_name\":{\"displayName\":\"Home Team\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.07,
+          "width": 175.97,
+          "x": 984.28,
+          "y": 525.73,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"4e2002470e228e7d3b6f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":786.4004563605249,\"y\":524.9971477467199,\"z\":6000,\"width\":175.97261836851112,\"height\":154.06731317741014,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.away_team_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"away_team_name\"},\"Name\":\"fact_skater_stats_per_60.away_team_name\",\"NativeReferenceName\":\"Away Team\"}]},\"columnProperties\":{\"fact_skater_stats_per_60.away_team_name\":{\"displayName\":\"Away Team\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.07,
+          "width": 175.97,
+          "x": 786.40,
+          "y": 525.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"5048db156ab9bf088f23\",\"layouts\":[{\"id\":0,\"position\":{\"x\":197.14774671990872,\"y\":27.01654306902453,\"z\":0,\"width\":973.3257273245864,\"height\":284.7689674843126,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.Fullname\"},{\"queryRef\":\"fact_skater_stats_per_60.primaryPosition\"},{\"queryRef\":\"fact_skater_stats_per_60.season\"},{\"queryRef\":\"Measures_table.Total TOI (Min)\"},{\"queryRef\":\"Measures_table.Assists per 60\"},{\"queryRef\":\"Measures_table.Goals per 60\"},{\"queryRef\":\"Measures_table.Shots per 60\"},{\"queryRef\":\"Measures_table.Total Assists\"},{\"queryRef\":\"Measures_table.Total Goals\"},{\"queryRef\":\"Measures_table.Total Shots\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"skater_measures_table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Fullname\"},\"Name\":\"fact_skater_stats_per_60.Fullname\",\"NativeReferenceName\":\"Fullname\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Assists per 60\"},\"Name\":\"Measures_table.Assists per 60\",\"NativeReferenceName\":\"Assists per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Goals per 60\"},\"Name\":\"Measures_table.Goals per 60\",\"NativeReferenceName\":\"Goals per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Shots per 60\"},\"Name\":\"Measures_table.Shots per 60\",\"NativeReferenceName\":\"Shots per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Assists\"},\"Name\":\"Measures_table.Total Assists\",\"NativeReferenceName\":\"Total Assists\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Goals\"},\"Name\":\"Measures_table.Total Goals\",\"NativeReferenceName\":\"Total Goals\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Shots\"},\"Name\":\"Measures_table.Total Shots\",\"NativeReferenceName\":\"Total Shots\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total TOI (Min)\"},\"Name\":\"Measures_table.Total TOI (Min)\",\"NativeReferenceName\":\"Total TOI (Min)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"primaryPosition\"},\"Name\":\"fact_skater_stats_per_60.primaryPosition\",\"NativeReferenceName\":\"primaryPosition\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"season\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total TOI (Min)\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'AlternatingRowsNew'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 284.77,
+          "width": 973.33,
+          "x": 197.15,
+          "y": 27.02,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"542ba745c1683b17867f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":457.0907016543069,\"y\":362.89788933257284,\"z\":2000,\"width\":175.97261836851112,\"height\":94.92298916143753,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.season\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_skater_stats_per_60.season\",\"NativeReferenceName\":\"Season\"}]},\"columnProperties\":{\"fact_skater_stats_per_60.season\":{\"displayName\":\"Season\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 94.92,
+          "width": 175.97,
+          "x": 457.09,
+          "y": 362.90,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"9183508498f7b049e8bc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6172276098113,\"y\":525.7273245864234,\"z\":5000,\"width\":175.97261836851112,\"height\":186.19509412435823,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.type\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"type\"},\"Name\":\"fact_skater_stats_per_60.type\",\"NativeReferenceName\":\"Type of Game\"}]},\"columnProperties\":{\"fact_skater_stats_per_60.type\":{\"displayName\":\"Type of Game\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 186.20,
+          "width": 175.97,
+          "x": 566.62,
+          "y": 525.73,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"e9453328e52b95621461\",\"layouts\":[{\"id\":0,\"position\":{\"x\":654.2384483742156,\"y\":362.89788933257284,\"z\":3000,\"width\":230.73588134626354,\"height\":106.60581859669138,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.date_time_GMT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"date_time_GMT\"},\"Name\":\"fact_skater_stats_per_60.date_time_GMT\",\"NativeReferenceName\":\"Dates (GMT)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"date_time_GMT\"}}}]},\"columnProperties\":{\"fact_skater_stats_per_60.date_time_GMT\":{\"displayName\":\"Dates (GMT)\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2020-09-29T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"date_time_GMT\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2020-09-30T00:00:00'\"}}}}}]}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 106.61,
+          "width": 230.74,
+          "x": 654.24,
+          "y": 362.90,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"ee09069363c83bcd188f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":153.33713633770685,\"y\":525.7273245864234,\"z\":4000,\"width\":175.97261836851112,\"height\":186.19509412435823,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_skater_stats_per_60.venue\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_skater_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"venue\"},\"Name\":\"fact_skater_stats_per_60.venue\",\"NativeReferenceName\":\"Away or Home\"}]},\"columnProperties\":{\"fact_skater_stats_per_60.venue\":{\"displayName\":\"Away or Home\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 186.20,
+          "width": 175.97,
+          "x": 153.34,
+          "y": 525.73,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "goalie_overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "dfdf7dd48853d97fae4c",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1391754c5098a9a4d690\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50.38220193953223,\"y\":38.69937250427838,\"z\":0,\"width\":1206.9823160296633,\"height\":284.7689674843126,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.firstName\"},{\"queryRef\":\"fact_goalie_stats_per_60.lastName\"},{\"queryRef\":\"fact_goalie_stats_per_60.primaryPosition\"},{\"queryRef\":\"fact_goalie_stats_per_60.season\"},{\"queryRef\":\"goalie_measures_table.G Total TOI (Min)\"},{\"queryRef\":\"goalie_measures_table.Saves per 60\"},{\"queryRef\":\"goalie_measures_table.G Assists per 60\"},{\"queryRef\":\"goalie_measures_table.G Goals per 60\"},{\"queryRef\":\"goalie_measures_table.G Shots per 60\"},{\"queryRef\":\"goalie_measures_table.G Total Assists\"},{\"queryRef\":\"goalie_measures_table.G Total Goals\"},{\"queryRef\":\"goalie_measures_table.G Total Shots\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"goalie_measures_table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"firstName\"},\"Name\":\"fact_goalie_stats_per_60.firstName\",\"NativeReferenceName\":\"firstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"lastName\"},\"Name\":\"fact_goalie_stats_per_60.lastName\",\"NativeReferenceName\":\"lastName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_goalie_stats_per_60.season\",\"NativeReferenceName\":\"season\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"primaryPosition\"},\"Name\":\"fact_goalie_stats_per_60.primaryPosition\",\"NativeReferenceName\":\"primaryPosition\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Saves per 60\"},\"Name\":\"goalie_measures_table.Saves per 60\",\"NativeReferenceName\":\"Saves per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Assists per 60\"},\"Name\":\"goalie_measures_table.G Assists per 60\",\"NativeReferenceName\":\"G Assists per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Goals per 60\"},\"Name\":\"goalie_measures_table.G Goals per 60\",\"NativeReferenceName\":\"G Goals per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Shots per 60\"},\"Name\":\"goalie_measures_table.G Shots per 60\",\"NativeReferenceName\":\"G Shots per 60\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Total Assists\"},\"Name\":\"goalie_measures_table.G Total Assists\",\"NativeReferenceName\":\"G Total Assists\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Total Goals\"},\"Name\":\"goalie_measures_table.G Total Goals\",\"NativeReferenceName\":\"G Total Goals\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Total Shots\"},\"Name\":\"goalie_measures_table.G Total Shots\",\"NativeReferenceName\":\"G Total Shots\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"G Total TOI (Min)\"},\"Name\":\"goalie_measures_table.G Total TOI (Min)\",\"NativeReferenceName\":\"G Total TOI (Min)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Saves per 60\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'AlternatingRowsNew'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 284.77,
+          "width": 1206.98,
+          "x": 50.38,
+          "y": 38.70,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"22598e50e532c3d907a2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":153.33713633770685,\"y\":525.7273245864234,\"z\":4000,\"width\":175.97261836851112,\"height\":186.19509412435823,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.venue\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"venue\"},\"Name\":\"fact_goalie_stats_per_60.venue\",\"NativeReferenceName\":\"Away or Home\"}]},\"columnProperties\":{\"fact_goalie_stats_per_60.venue\":{\"displayName\":\"Away or Home\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 186.20,
+          "width": 175.97,
+          "x": 153.34,
+          "y": 525.73,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"415f0e65c570e347f6be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":984.278379920137,\"y\":525.7273245864232,\"z\":7000,\"width\":175.97261836851112,\"height\":154.06731317741014,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.home_team_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f1\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"home_team_name\"},\"Name\":\"fact_goalie_stats_per_60.home_team_name\",\"NativeReferenceName\":\"Home Team\"}]},\"columnProperties\":{\"fact_goalie_stats_per_60.home_team_name\":{\"displayName\":\"Home Team\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.07,
+          "width": 175.97,
+          "x": 984.28,
+          "y": 525.73,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"6b7becc8a89b780950e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":786.4004563605249,\"y\":524.9971477467199,\"z\":6000,\"width\":175.97261836851112,\"height\":154.06731317741014,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.away_team_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f1\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"away_team_name\"},\"Name\":\"fact_goalie_stats_per_60.away_team_name\",\"NativeReferenceName\":\"Away Team\"}]},\"columnProperties\":{\"fact_goalie_stats_per_60.away_team_name\":{\"displayName\":\"Away Team\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.07,
+          "width": 175.97,
+          "x": 786.40,
+          "y": 525.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"85846c236c910f408533\",\"layouts\":[{\"id\":0,\"position\":{\"x\":552.0136908157446,\"y\":365.81859669138623,\"z\":3000,\"width\":230.73588134626354,\"height\":106.60581859669138,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.date_time_GMT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"date_time_GMT\"},\"Name\":\"fact_goalie_stats_per_60.date_time_GMT\",\"NativeReferenceName\":\"Date (GMT)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"date_time_GMT\"}}}]},\"columnProperties\":{\"fact_goalie_stats_per_60.date_time_GMT\":{\"displayName\":\"Date (GMT)\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2020-09-29T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 106.61,
+          "width": 230.74,
+          "x": 552.01,
+          "y": 365.82,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b436c25b24d8f590ad30\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566.6172276098113,\"y\":525.7273245864234,\"z\":5000,\"width\":175.97261836851112,\"height\":186.19509412435823,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.type\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"type\"},\"Name\":\"fact_goalie_stats_per_60.type\",\"NativeReferenceName\":\"Type of Game\"}]},\"columnProperties\":{\"fact_goalie_stats_per_60.type\":{\"displayName\":\"Type of Game\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 186.20,
+          "width": 175.97,
+          "x": 566.62,
+          "y": 525.73,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"ecb22d148aa4f920ea2a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":354.135767256132,\"y\":524.99714774672,\"z\":1000,\"width\":175.97261836851112,\"height\":186.19509412435823,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.primaryPosition\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"primaryPosition\"},\"Name\":\"fact_goalie_stats_per_60.primaryPosition\",\"NativeReferenceName\":\"Primary Position\"}]},\"columnProperties\":{\"fact_goalie_stats_per_60.primaryPosition\":{\"displayName\":\"Primary Position\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 186.20,
+          "width": 175.97,
+          "x": 354.14,
+          "y": 525.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f14f42d83789f3042cc1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":354.8659440958357,\"y\":365.81859669138623,\"z\":2000,\"width\":175.97261836851112,\"height\":94.92298916143753,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_goalie_stats_per_60.season\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"},\"Name\":\"fact_goalie_stats_per_60.season\",\"NativeReferenceName\":\"Season\"}]},\"columnProperties\":{\"fact_goalie_stats_per_60.season\":{\"displayName\":\"Season\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_goalie_stats_per_60\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"season\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'20002001'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 94.92,
+          "width": 175.97,
+          "x": 354.87,
+          "y": 365.82,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

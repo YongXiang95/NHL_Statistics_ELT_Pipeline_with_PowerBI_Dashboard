@@ -1,0 +1,69 @@
+table skater_measures_table
+	lineageTag: 0cf34ef0-7527-4ce0-b902-81bae79211de
+
+	measure 'Total TOI (Min)' =
+			
+			SUM ( fact_skater_stats_per_60[total_toi_min] )
+		lineageTag: 4541dd91-c3cb-42be-b6b4-c773e326188e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Goals' =
+			
+			SUM ( fact_skater_stats_per_60[total_goals] )
+		formatString: 0
+		lineageTag: c2dfe396-ca3c-4c84-9160-ea622ce38317
+
+	measure 'Total Assists' =
+			
+			SUM ( fact_skater_stats_per_60[total_assists] )
+		formatString: 0
+		lineageTag: b6f417d7-6a08-474a-bf77-e4c89285b260
+
+	measure 'Total Shots' =
+			
+			SUM ( fact_skater_stats_per_60[total_shots] )
+		formatString: 0
+		lineageTag: dbea6015-9caf-4b7e-b36d-32319e34c1d9
+
+	measure 'Goals per 60' =
+			
+			DIVIDE ( [Total Goals], [Total TOI (Min)] ) * 60
+		lineageTag: faf5347c-eb52-4655-89e3-b84e4af73e17
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Assists per 60' =
+			
+			DIVIDE ( [Total Assists], [Total TOI (Min)] ) * 60
+		lineageTag: a5c82735-25b0-4564-ac0e-8da31ac6da5b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Shots per 60' =
+			
+			DIVIDE ( [Total Shots], [Total TOI (Min)] ) * 60
+		lineageTag: a50422d8-31d0-4df2-bd33-3328625908cc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MeasureHolder
+		isHidden
+		lineageTag: 9d4a4439-6d1f-4d49-8aaa-c5e0d8196487
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MeasureHolder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition skater_measures_table = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "MeasureHolder", STRING,
+				    { { "Measures" } }
+				)
+
+	annotation PBI_Id = 3b1c9f84761f4b3a96647613d55aab14
+

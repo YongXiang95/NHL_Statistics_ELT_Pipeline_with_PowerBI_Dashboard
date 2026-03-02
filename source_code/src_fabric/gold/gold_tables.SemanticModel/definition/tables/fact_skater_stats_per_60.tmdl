@@ -1,0 +1,565 @@
+table fact_skater_stats_per_60
+	lineageTag: c2757e04-a653-4d6d-a191-d2d8e4e2ab2a
+	sourceLineageTag: [gold].[fact_skater_stats_per_60]
+
+	column player_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3856951f-f44d-4f63-b6c7-3fd7beefd915
+		sourceLineageTag: player_id
+		summarizeBy: sum
+		sourceColumn: player_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_team_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7d33fa03-a5b6-4d2e-aed8-34fa8adf0964
+		sourceLineageTag: home_team_id
+		summarizeBy: sum
+		sourceColumn: home_team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column away_team_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4d5b19e6-72ec-490e-8e21-dd39972a275e
+		sourceLineageTag: away_team_id
+		summarizeBy: sum
+		sourceColumn: away_team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 32802f3c-6edc-44e0-9d5f-f0cc807b8527
+		sourceLineageTag: game_id
+		summarizeBy: sum
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 219983f2-0a46-4ddc-aa51-e1022425d63c
+		sourceLineageTag: team_id
+		summarizeBy: sum
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_goals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 685e6525-ddf9-4310-9701-c1f8996b4177
+		sourceLineageTag: total_goals
+		summarizeBy: sum
+		sourceColumn: total_goals
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_assists
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 626c8200-1923-4f61-90bb-130106c575a7
+		sourceLineageTag: total_assists
+		summarizeBy: sum
+		sourceColumn: total_assists
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_shots
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: cf098de4-3cdc-4f30-a0c2-e75ea02b1eb7
+		sourceLineageTag: total_shots
+		summarizeBy: sum
+		sourceColumn: total_shots
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_hits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fe0fcc51-8430-4b18-9df6-31da01a46daa
+		sourceLineageTag: total_hits
+		summarizeBy: sum
+		sourceColumn: total_hits
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_powerPlayGoals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4d6e8faf-6fee-42a2-b3c7-17e7ca36dda8
+		sourceLineageTag: total_powerPlayGoals
+		summarizeBy: sum
+		sourceColumn: total_powerPlayGoals
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_powerPlayAssists
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 86d81c9b-5e48-4d1c-8552-c274092713ea
+		sourceLineageTag: total_powerPlayAssists
+		summarizeBy: sum
+		sourceColumn: total_powerPlayAssists
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_penaltyMinutes
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 84d66d24-3f7c-4063-8e25-9bc6b954970b
+		sourceLineageTag: total_penaltyMinutes
+		summarizeBy: sum
+		sourceColumn: total_penaltyMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_faceOffWins
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 57608af5-81d8-4ce6-bf70-4f5ac09148c0
+		sourceLineageTag: total_faceOffWins
+		summarizeBy: sum
+		sourceColumn: total_faceOffWins
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_faceoffTaken
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a419b68d-8d7f-40dc-ae3c-ffa3ff2c9439
+		sourceLineageTag: total_faceoffTaken
+		summarizeBy: sum
+		sourceColumn: total_faceoffTaken
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_takeaways
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5f2a1c81-9ed9-4128-b6d3-119be4a0db72
+		sourceLineageTag: total_takeaways
+		summarizeBy: sum
+		sourceColumn: total_takeaways
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_giveaways
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e22f5ad2-be63-4e3d-85af-9e58349890f3
+		sourceLineageTag: total_giveaways
+		summarizeBy: sum
+		sourceColumn: total_giveaways
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_shortHandedGoals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: dcaf7cf7-e763-4b66-8571-750e9f63d795
+		sourceLineageTag: total_shortHandedGoals
+		summarizeBy: sum
+		sourceColumn: total_shortHandedGoals
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_shortHandedAssists
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7a1eac93-5bc7-4467-9100-943bb001ef96
+		sourceLineageTag: total_shortHandedAssists
+		summarizeBy: sum
+		sourceColumn: total_shortHandedAssists
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_blocked
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1f1197b1-c57f-4fc3-aad5-03f6b42cc509
+		sourceLineageTag: total_blocked
+		summarizeBy: sum
+		sourceColumn: total_blocked
+
+		annotation SummarizationSetBy = Automatic
+
+	column goals_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 15acf23f-759a-4565-8cb1-43df6302165e
+		sourceLineageTag: goals_per_60
+		summarizeBy: sum
+		sourceColumn: goals_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column assists_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: f94555a6-360f-4a8b-b53f-9dca842ee73b
+		sourceLineageTag: assists_per_60
+		summarizeBy: sum
+		sourceColumn: assists_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shots_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: a7ed3faf-18e8-4762-9143-39f299775773
+		sourceLineageTag: shots_per_60
+		summarizeBy: sum
+		sourceColumn: shots_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column hits_per_60
+		dataType: double
+		sourceProviderType: real
+		lineageTag: a1a64ffe-426b-4369-97b2-4603640a71a1
+		sourceLineageTag: hits_per_60
+		summarizeBy: sum
+		sourceColumn: hits_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column powerPlayGoals_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 79321b8e-09c3-4338-b9dd-9ac67b19c248
+		sourceLineageTag: powerPlayGoals_per_60
+		summarizeBy: sum
+		sourceColumn: powerPlayGoals_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column powerPlayAssists_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 92c788cc-65b8-4ba3-acac-bcdde3ccde1e
+		sourceLineageTag: powerPlayAssists_per_60
+		summarizeBy: sum
+		sourceColumn: powerPlayAssists_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penaltyMinutes_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: f603b816-d289-41e8-b055-b31f138b1e6b
+		sourceLineageTag: penaltyMinutes_per_60
+		summarizeBy: sum
+		sourceColumn: penaltyMinutes_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column faceOffWins_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 42230f73-745a-4320-89cd-b59e580886f9
+		sourceLineageTag: faceOffWins_per_60
+		summarizeBy: sum
+		sourceColumn: faceOffWins_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column faceoffTaken_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4b18ea22-6c66-4b02-abc8-10148076bed7
+		sourceLineageTag: faceoffTaken_per_60
+		summarizeBy: sum
+		sourceColumn: faceoffTaken_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column takeaways_per_60
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 7442176a-2f95-4da8-a07b-519424f44061
+		sourceLineageTag: takeaways_per_60
+		summarizeBy: sum
+		sourceColumn: takeaways_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column giveaways_per_60
+		dataType: double
+		sourceProviderType: real
+		lineageTag: c31377eb-6cfc-426e-804b-37c6154c4480
+		sourceLineageTag: giveaways_per_60
+		summarizeBy: sum
+		sourceColumn: giveaways_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shortHandedGoals_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 92af2657-698b-466b-95c0-9b8be8789606
+		sourceLineageTag: shortHandedGoals_per_60
+		summarizeBy: sum
+		sourceColumn: shortHandedGoals_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shortHandedAssists_per_60
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7542692a-dd09-4fba-b7d6-f9e27aeb500c
+		sourceLineageTag: shortHandedAssists_per_60
+		summarizeBy: sum
+		sourceColumn: shortHandedAssists_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column blocked_per_60
+		dataType: double
+		sourceProviderType: real
+		lineageTag: 499c2404-3750-46d7-b361-e2e5a27c9ac9
+		sourceLineageTag: blocked_per_60
+		summarizeBy: sum
+		sourceColumn: blocked_per_60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_toi_min
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4f7eeca5-2981-4ca5-9027-3fd06020d695
+		sourceLineageTag: total_toi_min
+		summarizeBy: sum
+		sourceColumn: total_toi_min
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column season
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 6bab9fc6-8ad0-4119-88f5-683f367150e4
+		sourceLineageTag: season
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 6f5c4cf4-f683-4890-8731-eefda3c7d745
+		sourceLineageTag: type
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_time_GMT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f017d0e7-86b3-48b9-b62a-6c1001bcbdbf
+		sourceLineageTag: date_time_GMT
+		summarizeBy: none
+		sourceColumn: date_time_GMT
+
+		annotation SummarizationSetBy = Automatic
+
+	column away_goals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 72b62abf-cc2d-4af3-9579-aa6ac1581baf
+		sourceLineageTag: away_goals
+		summarizeBy: sum
+		sourceColumn: away_goals
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_goals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d029aee1-6613-495f-90ba-08cf4ed3c68b
+		sourceLineageTag: home_goals
+		summarizeBy: sum
+		sourceColumn: home_goals
+
+		annotation SummarizationSetBy = Automatic
+
+	column outcome
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: e58d0be6-d69f-4764-a682-9964093325af
+		sourceLineageTag: outcome
+		summarizeBy: none
+		sourceColumn: outcome
+
+		annotation SummarizationSetBy = Automatic
+
+	column away_team_shortName
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: db251f45-fe3d-43ad-b0b9-5972e98f10bc
+		sourceLineageTag: away_team_shortName
+		summarizeBy: none
+		sourceColumn: away_team_shortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column away_team_name
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 5cdb0a94-5d9b-4bb7-b68a-27422bbb6871
+		sourceLineageTag: away_team_name
+		summarizeBy: none
+		sourceColumn: away_team_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column away_team_abbr
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 80c25fcd-3e08-4856-a82a-cb1d9dbacffe
+		sourceLineageTag: away_team_abbr
+		summarizeBy: none
+		sourceColumn: away_team_abbr
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_team_shortName
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 53406245-adcb-467e-8b92-c8441f39c539
+		sourceLineageTag: home_team_shortName
+		summarizeBy: none
+		sourceColumn: home_team_shortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_team_name
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 90e7a678-e75b-490a-ac71-00b73eb58460
+		sourceLineageTag: home_team_name
+		summarizeBy: none
+		sourceColumn: home_team_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_team_abbr
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: a333a746-2dbf-47bf-8d3f-be9f24aa2b49
+		sourceLineageTag: home_team_abbr
+		summarizeBy: none
+		sourceColumn: home_team_abbr
+
+		annotation SummarizationSetBy = Automatic
+
+	column firstName
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 88ccd46e-dd07-45e7-bd09-2963e6630793
+		sourceLineageTag: firstName
+		summarizeBy: none
+		sourceColumn: firstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastName
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: daec0183-67db-4416-8735-f2ce688fcc8c
+		sourceLineageTag: lastName
+		summarizeBy: none
+		sourceColumn: lastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column primaryPosition
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: cb025a9b-267d-4128-91a2-099a9554b0d8
+		sourceLineageTag: primaryPosition
+		summarizeBy: none
+		sourceColumn: primaryPosition
+
+		annotation SummarizationSetBy = Automatic
+
+	column venue
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: e1fda9a7-698e-4eff-99b3-b3e5a4c95e93
+		sourceLineageTag: venue
+		summarizeBy: none
+		sourceColumn: venue
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_skater_stats_per_60 = entity
+		mode: directLake
+		source
+			entityName: fact_skater_stats_per_60
+			schemaName: gold
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

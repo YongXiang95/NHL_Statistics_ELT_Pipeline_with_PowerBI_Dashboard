@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - gold_tables' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/live_nhl_ws", "gold_tables"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 9243995d-4c65-4715-b50a-7eda637a6561
+
+	annotation PBI_IncludeFutureArtifacts = True
+

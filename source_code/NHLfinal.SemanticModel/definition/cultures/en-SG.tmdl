@@ -1,0 +1,305 @@
+cultureInfo en-SG
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fact_skater_stats_per_60.primaryposition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "primaryPosition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Primary Position": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_skater_stats_per_60.season": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "season"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Season": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_skater_stats_per_60.venue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "venue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Away or Home": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_skater_stats_per_60.date_time_gmt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "date_time_GMT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dates (GMT)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_skater_stats_per_60.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type of Game": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_skater_stats_per_60.away_team_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "away_team_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Away Team": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_skater_stats_per_60.home_team_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_skater_stats_per_60",
+			          "ConceptualProperty": "home_team_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Home Team": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.season": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "season"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Season": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.date_time_gmt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "date_time_GMT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Date (GMT)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.venue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "venue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Away or Home": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.primaryposition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "primaryPosition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Primary Position": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type of Game": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.away_team_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "away_team_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Away Team": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_goalie_stats_per_60.home_team_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_goalie_stats_per_60",
+			          "ConceptualProperty": "home_team_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Home Team": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

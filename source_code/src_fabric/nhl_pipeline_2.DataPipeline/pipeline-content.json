@@ -1,0 +1,420 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "GetMetadata",
+        "typeProperties": {
+          "datasetSettings": {
+            "type": "DelimitedText",
+            "typeProperties": {
+              "location": {
+                "type": "LakehouseLocation",
+                "folderPath": "historical/landing"
+              },
+              "columnDelimiter": ",",
+              "quoteChar": "\"",
+              "escapeChar": "\\",
+              "firstRowAsHeader": true
+            },
+            "schema": [],
+            "linkedService": {
+              "name": "nhl_bronze_lh",
+              "properties": {
+                "type": "Lakehouse",
+                "typeProperties": {
+                  "artifactId": "d96ecac8-18de-a2fb-42d8-626cdf6d1061",
+                  "workspaceId": "00000000-0000-0000-0000-000000000000",
+                  "rootFolder": "Files"
+                },
+                "annotations": []
+              }
+            },
+            "annotations": []
+          },
+          "fieldList": [
+            "childItems"
+          ],
+          "storeSettings": {
+            "type": "AzureBlobStorageReadSettings",
+            "recursive": true,
+            "enablePartitionDiscovery": false
+          },
+          "formatSettings": {
+            "type": "DelimitedTextReadSettings"
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "check_for_files",
+        "dependsOn": []
+      },
+      {
+        "type": "Filter",
+        "typeProperties": {
+          "items": {
+            "value": "@activity('check_for_files').output.childItems",
+            "type": "Expression"
+          },
+          "condition": {
+            "value": "@and(\n    endsWith(item().name, '.csv'),\n    contains(variables('expected_files'), replace(item().name, '.csv', ''))\n)",
+            "type": "Expression"
+          }
+        },
+        "name": "filter_by_file_name",
+        "dependsOn": [
+          {
+            "activity": "check_for_files",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "items": {
+            "value": "@activity('filter_by_file_name').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "TridentNotebook",
+              "typeProperties": {
+                "notebookId": "6ad58ea5-a2b7-9331-43ce-c23160ce87fd",
+                "workspaceId": "00000000-0000-0000-0000-000000000000",
+                "parameters": {
+                  "file": {
+                    "value": {
+                      "value": "@item().name",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  },
+                  "exec_start_time": {
+                    "value": {
+                      "value": "@pipeline().TriggerTime",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  },
+                  "pipeline_id": {
+                    "value": {
+                      "value": "@pipeline().Pipeline",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  },
+                  "run_id": {
+                    "value": {
+                      "value": "@pipeline().RunId",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  }
+                }
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 3,
+                "retryIntervalInSeconds": 60,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "silver_transformation",
+              "dependsOn": []
+            },
+            {
+              "type": "AppendVariable",
+              "typeProperties": {
+                "variableName": "schema_name",
+                "value": {
+                  "value": "@activity('silver_transformation').output.result.exitValue",
+                  "type": "Expression"
+                }
+              },
+              "name": "store_staging_schema_names",
+              "dependsOn": [
+                {
+                  "activity": "silver_transformation",
+                  "dependencyConditions": [
+                    "Succeeded"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "name": "silver_transform",
+        "dependsOn": [
+          {
+            "activity": "filter_by_file_name",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "792bb810-02e3-b2d5-4921-f86033d7df24",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "schema_name": {
+              "value": {
+                "value": "@string(variables('schema_name'))",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "pipeline_id": {
+              "value": {
+                "value": "@pipeline().Pipeline",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "run_id": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "exec_start_time": {
+              "value": {
+                "value": "@pipeline().TriggerTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "silver_cross_check_load",
+        "dependsOn": [
+          {
+            "activity": "silver_transform",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "91f0a6c0-ef15-b288-425f-456b8baff1e3",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "pipeline_id": {
+              "value": {
+                "value": "@pipeline().Pipeline",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "run_id": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "gold_aggregate_check_stage",
+        "dependsOn": [
+          {
+            "activity": "silver_cross_check_load",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "IfCondition",
+        "typeProperties": {
+          "expression": {
+            "value": "@json(activity('gold_aggregate_check_stage').output.result.exitValue).proceed",
+            "type": "Expression"
+          },
+          "ifTrueActivities": [
+            {
+              "type": "SqlServerStoredProcedure",
+              "typeProperties": {
+                "storedProcedureName": "[admin].[usp_publish_gold_per_60]",
+                "storedProcedureParameters": {
+                  "pipeline_id": {
+                    "value": {
+                      "value": "@pipeline().Pipeline",
+                      "type": "Expression"
+                    },
+                    "type": "String"
+                  },
+                  "pipeline_run_id": {
+                    "value": {
+                      "value": "@pipeline().RunId",
+                      "type": "Expression"
+                    },
+                    "type": "String"
+                  },
+                  "stg_goalie_table": {
+                    "value": {
+                      "value": "@json(activity('gold_aggregate_check_stage').output.result.exitValue).goalie",
+                      "type": "Expression"
+                    },
+                    "type": "String"
+                  },
+                  "stg_skater_table": {
+                    "value": {
+                      "value": "@json(activity('gold_aggregate_check_stage').output.result.exitValue).skater",
+                      "type": "Expression"
+                    },
+                    "type": "String"
+                  }
+                }
+              },
+              "linkedService": {
+                "name": "nhl_gold_wh",
+                "properties": {
+                  "type": "DataWarehouse",
+                  "typeProperties": {
+                    "artifactId": "9722f1fb-4f3a-477f-852d-d151c6bbcd5b",
+                    "endpoint": "dn6gtpmbysoepba6yymfijtvym-xuk3sdjanhzutfjl37bwyrtfly.datawarehouse.fabric.microsoft.com",
+                    "workspaceId": "0db915bd-6920-49f3-952b-dfc36c46655e"
+                  },
+                  "annotations": []
+                }
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "publish_to_gold_wh",
+              "dependsOn": []
+            },
+            {
+              "type": "TridentNotebook",
+              "typeProperties": {
+                "notebookId": "f32f960f-c83f-8d66-4847-5ad987ff8815",
+                "workspaceId": "00000000-0000-0000-0000-000000000000",
+                "parameters": {
+                  "pipeline_id": {
+                    "value": {
+                      "value": "@pipeline().Pipeline",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  },
+                  "run_id": {
+                    "value": {
+                      "value": "@pipeline().RunId",
+                      "type": "Expression"
+                    },
+                    "type": "string"
+                  }
+                }
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "check_load_gold",
+              "dependsOn": [
+                {
+                  "activity": "publish_to_gold_wh",
+                  "dependencyConditions": [
+                    "Succeeded"
+                  ]
+                }
+              ]
+            }
+          ],
+          "ifFalseActivities": []
+        },
+        "name": "If Condition1",
+        "dependsOn": [
+          {
+            "activity": "gold_aggregate_check_stage",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Office365Email",
+        "typeProperties": {
+          "body": "<p>Hi,</p>\n<p>The NHL ELT pipeline was executed to completion on @{pipeline().TriggerTime}.</p>\n<p>Please review the logs in the respective bronze (nhl_bronze_lh) and silver (nhl_silver_lh) lakehouses for summary of this run.</p>\n<p><strong>Run details:</strong></p>\n<p>Workspace: @{pipeline().DataFactory}</p>\n<p>Pipeline Name: @{pipeline().PipelineName}</p>\n<p>Pipeline ID: @{pipeline().Pipeline}</p>\n<p>Run ID: @{pipeline().RunId}</p>\n<p>System generated email. Please do not reply to this email.</p>",
+          "to": "JustinP@genstudents.org; yongo@genstudents.org;  SyafiqB@genstudents.org",
+          "subject": "NHL data pipeline run"
+        },
+        "externalReferences": {
+          "connection": "124db6f5-6e2d-49b1-8efc-47092b37e888"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Office365Email1",
+        "dependsOn": [
+          {
+            "activity": "If Condition1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "variables": {
+      "schema_name": {
+        "type": "Array"
+      },
+      "expected_files": {
+        "type": "Array",
+        "defaultValue": [
+          "game",
+          "player_info",
+          "team_info",
+          "game_plays",
+          "game_teams_stats",
+          "game_skater_stats",
+          "game_goalie_stats",
+          "game_shifts",
+          "game_plays_players"
+        ]
+      }
+    }
+  }
+}

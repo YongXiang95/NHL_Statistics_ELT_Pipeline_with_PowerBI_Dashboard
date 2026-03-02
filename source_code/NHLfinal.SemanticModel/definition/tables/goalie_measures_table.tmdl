@@ -1,0 +1,82 @@
+table goalie_measures_table
+	lineageTag: be9b969c-7c2f-4e88-99d4-9308652de0e2
+
+	measure 'G Total TOI (Min)' =
+			
+			SUM ( fact_goalie_stats_per_60[total_toi_min] )
+		lineageTag: ceef8c8d-a41f-48ad-ad0d-f381cf67ed19
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Saves' =
+			
+			SUM ( fact_goalie_stats_per_60[total_saves] )
+		formatString: 0
+		lineageTag: b025cf6b-25e6-4c6a-8894-765000ffd76c
+
+	measure 'G Total Assists' =
+			
+			SUM ( fact_goalie_stats_per_60[total_assists] )
+		formatString: 0
+		lineageTag: b13fb118-3623-42c4-bf92-44f00aa7b71c
+
+	measure 'G Total Shots' =
+			
+			SUM ( fact_goalie_stats_per_60[total_shots] )
+		formatString: 0
+		lineageTag: 380ebbba-1115-4222-ba70-9ed38fa5a924
+
+	measure 'G Total Goals' =
+			
+			SUM ( fact_goalie_stats_per_60[total_goals] )
+		formatString: 0
+		lineageTag: dd1f1017-1637-436f-8a74-1dcf5f30e435
+
+	measure 'G Assists per 60' =
+			
+			DIVIDE ( [G Total Assists], [G Total TOI (Min)] ) * 60
+		lineageTag: 9c13ee36-0e7f-4a98-9f65-ebc5395985a0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'G Goals per 60' =
+			
+			DIVIDE ( [G Total Goals], [G Total TOI (Min)] ) * 60
+		lineageTag: c9dca03b-a79b-4750-90f9-622fc0c2c17e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'G Shots per 60' =
+			
+			DIVIDE ( [G Total Shots], [G Total TOI (Min)] ) * 60
+		lineageTag: 2f09b797-8e79-444e-8bd7-508b843686a1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Saves per 60' =
+			
+			DIVIDE ( [Total Saves], [G Total TOI (Min)] ) * 60
+		lineageTag: e84d638d-cbe1-4543-aa5b-9c80b8f13743
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MeasureHolder
+		isHidden
+		lineageTag: 81ea2d99-0e29-407f-a8f8-9a12cfbecc80
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MeasureHolder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition goalie_measures_table = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "MeasureHolder", STRING,
+				    { { "Measures" } }
+				)
+
+	annotation PBI_Id = 7da734209a0143dfa90e2c1be74c69d6
+

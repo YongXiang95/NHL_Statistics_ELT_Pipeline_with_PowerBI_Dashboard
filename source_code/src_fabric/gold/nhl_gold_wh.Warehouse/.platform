@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "nhl_gold_wh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7d7d0497-de05-a7f3-455c-5c450de6a8a5"
+  }
+}

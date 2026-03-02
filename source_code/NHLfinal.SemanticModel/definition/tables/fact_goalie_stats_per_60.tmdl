@@ -1,0 +1,448 @@
+table fact_goalie_stats_per_60
+	lineageTag: f7370285-07ea-4656-bb3a-62d3d6b49a39
+	sourceLineageTag: e4cd47a4-11b0-46e8-8d98-a58ce507aa83
+
+	column player_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5066c013-4d79-471a-ac45-1f2506bf0724
+		sourceLineageTag: 40e0b512-a72c-4584-a7e6-538711e811df
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: player_id
+
+		annotation SummarizationSetBy = User
+
+	column home_team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 53519370-4dd6-41bb-bd8f-1706e37f3dae
+		sourceLineageTag: 8800869d-2e15-4ce5-9ebd-0490e0bba2f8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: home_team_id
+
+		annotation SummarizationSetBy = User
+
+	column away_team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c2f11267-a233-4f38-a58c-a24aa163b292
+		sourceLineageTag: 7b35f1fa-76f3-4935-b6c3-fe928b5dfe9d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: away_team_id
+
+		annotation SummarizationSetBy = User
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c3c5128-b123-4919-a6bc-e2edcb425abe
+		sourceLineageTag: 52d2ebc5-b973-4233-a6c7-6de8d92b713f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = User
+
+	column team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: db9a556f-822f-4525-89df-d40dce22c6d7
+		sourceLineageTag: 107a1e05-9f51-4ac5-8b70-826509a2b2cc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = User
+
+	column total_assists
+		dataType: int64
+		formatString: 0
+		lineageTag: d9bac52d-d2dc-4d20-9b85-9c528f01abf8
+		sourceLineageTag: 50a3943b-d8f8-404f-840e-c6a2d849825b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_assists
+
+		annotation SummarizationSetBy = User
+
+	column total_goals
+		dataType: int64
+		formatString: 0
+		lineageTag: aeab4ebb-7680-4cf2-a6cd-7673b21d5b16
+		sourceLineageTag: 3820c1a2-94c2-4535-a77e-30b274296688
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_goals
+
+		annotation SummarizationSetBy = User
+
+	column total_shots
+		dataType: int64
+		formatString: 0
+		lineageTag: 99dfafe4-73bd-4111-a077-c300d3429b6a
+		sourceLineageTag: 004ca5b8-ed66-4f7b-bfdd-9d7abac6e514
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_shots
+
+		annotation SummarizationSetBy = User
+
+	column total_saves
+		dataType: int64
+		formatString: 0
+		lineageTag: fec0f21e-e554-4cdd-8c2f-60adba28d4e6
+		sourceLineageTag: 4ab5684d-c1b4-48dc-bb81-4eb534870d60
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_saves
+
+		annotation SummarizationSetBy = User
+
+	column total_powerPlaySaves
+		dataType: int64
+		formatString: 0
+		lineageTag: 5709ec3c-c028-44ba-9bed-64c169172d2f
+		sourceLineageTag: 06f9772a-18ff-4e39-b881-4435d8d0f2d2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_powerPlaySaves
+
+		annotation SummarizationSetBy = User
+
+	column total_shortHandedSaves
+		dataType: int64
+		formatString: 0
+		lineageTag: 35825e35-af3d-4374-8f57-a60799f6ca44
+		sourceLineageTag: b58c04f3-9558-4c81-ae05-267dd6bf888a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_shortHandedSaves
+
+		annotation SummarizationSetBy = User
+
+	column total_evenSaves
+		dataType: int64
+		formatString: 0
+		lineageTag: 900f4d41-44d5-4bc2-91cd-24dfa03f4438
+		sourceLineageTag: da1be59d-3896-45b3-b437-b4840fa4cdf2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_evenSaves
+
+		annotation SummarizationSetBy = User
+
+	column total_shortHandedShotsAgainst
+		dataType: int64
+		formatString: 0
+		lineageTag: ca4dccc0-821b-49fd-be75-7404dadc6569
+		sourceLineageTag: ad1de65f-2e4a-4b41-b488-fd9279512c9c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_shortHandedShotsAgainst
+
+		annotation SummarizationSetBy = User
+
+	column total_evenShotsAgainst
+		dataType: int64
+		formatString: 0
+		lineageTag: 283bd8d2-0e06-4331-a7e9-64d03821bd35
+		sourceLineageTag: ed77fa9a-4765-4dd4-be14-92cea50336e7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_evenShotsAgainst
+
+		annotation SummarizationSetBy = User
+
+	column total_powerPlayShotsAgainst
+		dataType: int64
+		formatString: 0
+		lineageTag: cb9d6560-2b54-4aaa-8d4e-b74bf118a850
+		sourceLineageTag: fd8607ab-b145-4482-8df6-67f619e32922
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_powerPlayShotsAgainst
+
+		annotation SummarizationSetBy = User
+
+	column assists_per_60
+		dataType: double
+		lineageTag: 3f292f7a-859b-496b-9712-d26bcf1d3ba4
+		sourceLineageTag: 3c923b89-f00b-4be8-841b-7a01659f82d1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: assists_per_60
+
+		annotation SummarizationSetBy = User
+
+	column goals_per_60
+		dataType: double
+		lineageTag: 02a04fa1-1410-4ac5-b6e8-1e971f0fde19
+		sourceLineageTag: 77a7b2f7-03de-4862-82ca-b1ae28b8f513
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: goals_per_60
+
+		annotation SummarizationSetBy = User
+
+	column shots_per_60
+		dataType: double
+		lineageTag: b63830fe-abf3-4773-a416-596fa0b4c146
+		sourceLineageTag: 6f59d128-a6b0-498c-8340-2067ca5d0e0f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: shots_per_60
+
+		annotation SummarizationSetBy = User
+
+	column saves_per_60
+		dataType: double
+		lineageTag: ae5c9ef0-c4f6-4a41-abb5-e05cbea12be8
+		sourceLineageTag: 076a051f-1277-440a-8ea2-cef987bc792e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: saves_per_60
+
+		annotation SummarizationSetBy = User
+
+	column powerPlaySaves_per_60
+		dataType: double
+		lineageTag: aeb78dfe-1e34-4979-aaf3-4d509d98df33
+		sourceLineageTag: bdd9ec87-6cfd-4f3a-a64b-1958d617f5af
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: powerPlaySaves_per_60
+
+		annotation SummarizationSetBy = User
+
+	column shortHandedSaves_per_60
+		dataType: double
+		lineageTag: aac30ac2-f999-4371-a357-2fc1ec3a1fad
+		sourceLineageTag: eb24dd13-7be4-4c87-9561-c453f2e96c6e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: shortHandedSaves_per_60
+
+		annotation SummarizationSetBy = User
+
+	column evenSaves_per_60
+		dataType: double
+		lineageTag: 85aba4b4-a5f0-450f-aa3e-97af289a24b2
+		sourceLineageTag: 143d6e0e-5038-40d6-8458-f1b170169f6b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: evenSaves_per_60
+
+		annotation SummarizationSetBy = User
+
+	column shortHandedShotsAgainst_per_60
+		dataType: double
+		lineageTag: cbed6e7d-da6c-4e54-b536-2dcfd0ff2ce2
+		sourceLineageTag: b17dbead-ff3a-4ad5-864f-11e3584fdda7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: shortHandedShotsAgainst_per_60
+
+		annotation SummarizationSetBy = User
+
+	column evenShotsAgainst_per_60
+		dataType: double
+		lineageTag: 80256475-b582-4e3c-b46a-7792776a2e56
+		sourceLineageTag: c439b977-6147-46ed-8b2f-d64918d74fe1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: evenShotsAgainst_per_60
+
+		annotation SummarizationSetBy = User
+
+	column powerPlayShotsAgainst_per_60
+		dataType: double
+		lineageTag: a4cf960d-e900-43e2-beb3-2fa6fc010bbb
+		sourceLineageTag: 9b6ac197-e576-4e61-a74f-35e5725fb893
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: powerPlayShotsAgainst_per_60
+
+		annotation SummarizationSetBy = User
+
+	column total_toi_min
+		dataType: double
+		lineageTag: 45f6d63c-c5db-4f6f-9c27-941d157f45f6
+		sourceLineageTag: e4996a76-5a09-45f3-aba4-a849be048bd6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_toi_min
+
+		annotation SummarizationSetBy = User
+
+	column season
+		dataType: string
+		lineageTag: 01e1f639-27eb-4834-b37e-9c04e3985c86
+		sourceLineageTag: bb5400aa-345c-4b72-bbd4-219f02c5fc8a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = User
+
+	column type
+		dataType: string
+		lineageTag: abb25e6b-c479-48e5-bafe-99a104e9b901
+		sourceLineageTag: 1a50e066-df02-48f8-8bc9-05372f52eeec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = User
+
+	column date_time_GMT
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 582e7498-ce26-49e0-ac36-b547fb298148
+		sourceLineageTag: 8b4f621c-2835-4a3f-9aee-64f6cd29800d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: date_time_GMT
+
+		annotation SummarizationSetBy = User
+
+	column away_goals
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a30bb43-bb0b-44f6-990b-e5fcad93640c
+		sourceLineageTag: cf05ec2e-5e8f-4803-934f-7fc72d4f4cc4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: away_goals
+
+		annotation SummarizationSetBy = User
+
+	column home_goals
+		dataType: int64
+		formatString: 0
+		lineageTag: d745665d-5263-4239-9990-d9898253702e
+		sourceLineageTag: 48cc01ee-e2b2-4bc0-867f-b37396fdf33a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: home_goals
+
+		annotation SummarizationSetBy = User
+
+	column outcome
+		dataType: string
+		lineageTag: 3c4c89c2-0d5c-426e-a2fa-3fd39c41dccf
+		sourceLineageTag: a3886ec2-f5aa-42a9-ae4e-2e004cc782e9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: outcome
+
+		annotation SummarizationSetBy = User
+
+	column away_team_shortName
+		dataType: string
+		lineageTag: ece8dbcb-7064-45e0-b74b-bd53badc2438
+		sourceLineageTag: 357904fd-c492-4372-b2e1-887ec72a2abc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: away_team_shortName
+
+		annotation SummarizationSetBy = User
+
+	column away_team_name
+		dataType: string
+		lineageTag: 2887e71f-74ee-4d08-b524-14d8a90665b0
+		sourceLineageTag: 29598d94-1985-41ed-abf1-b757c14f45a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: away_team_name
+
+		annotation SummarizationSetBy = User
+
+	column away_team_abbr
+		dataType: string
+		lineageTag: c3c7fbb1-afaf-4bad-81aa-d36563011db0
+		sourceLineageTag: ad6bc7b1-7a0b-452c-8e2e-3a9c50113223
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: away_team_abbr
+
+		annotation SummarizationSetBy = User
+
+	column home_team_shortName
+		dataType: string
+		lineageTag: 547b9ee4-027f-45b7-8a58-8aa1343b0d13
+		sourceLineageTag: 0f80b4ef-71ce-446b-9e0e-63c28d875d0c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: home_team_shortName
+
+		annotation SummarizationSetBy = User
+
+	column home_team_name
+		dataType: string
+		lineageTag: f7278fef-4fde-49f8-bfc4-8828f7ccdbec
+		sourceLineageTag: 2e80c5a3-fc6e-49d6-bb35-add721469de3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: home_team_name
+
+		annotation SummarizationSetBy = User
+
+	column home_team_abbr
+		dataType: string
+		lineageTag: 4824fc10-2cce-4d70-b478-5db02475e53c
+		sourceLineageTag: 5d65177d-8a88-407f-95b8-802e6eb25c02
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: home_team_abbr
+
+		annotation SummarizationSetBy = User
+
+	column firstName
+		dataType: string
+		lineageTag: d9ddaafb-1a32-447f-8aae-69272fd13067
+		sourceLineageTag: 162da29b-7114-4285-bdb7-e766dfff8bb5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: firstName
+
+		annotation SummarizationSetBy = User
+
+	column lastName
+		dataType: string
+		lineageTag: 22b1ddd8-b58a-4eb1-8c9f-866ce230850a
+		sourceLineageTag: 13cd672c-a9d6-423f-8f2b-f3b800b1e4dc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastName
+
+		annotation SummarizationSetBy = User
+
+	column primaryPosition
+		dataType: string
+		lineageTag: d3b96183-a3d8-4f77-a45a-cecc03c55642
+		sourceLineageTag: 06b83dd9-0611-4488-acfe-aefbe8c91504
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: primaryPosition
+
+		annotation SummarizationSetBy = User
+
+	column venue
+		dataType: string
+		lineageTag: c7c2ba7e-e200-4fac-8cda-6d85232face4
+		sourceLineageTag: d8b4218a-82f5-4920-8d94-330cf3c0d51f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: venue
+
+		annotation SummarizationSetBy = User
+
+	partition fact_goalie_stats_per_60 = entity
+		mode: directQuery
+		source
+			entityName: fact_goalie_stats_per_60
+			expressionSource: 'DirectQuery to AS - gold_tables'
+

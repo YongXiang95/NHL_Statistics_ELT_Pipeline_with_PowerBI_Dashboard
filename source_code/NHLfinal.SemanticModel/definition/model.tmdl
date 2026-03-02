@@ -1,0 +1,19 @@
+model Model
+	culture: en-SG
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-SG
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectQuery to AS - gold_tables"]
+
+ref table fact_skater_stats_per_60
+ref table fact_goalie_stats_per_60
+ref table skater_measures_table
+ref table goalie_measures_table
+
+ref cultureInfo en-SG
+
