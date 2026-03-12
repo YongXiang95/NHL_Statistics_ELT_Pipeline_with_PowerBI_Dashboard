@@ -86,7 +86,7 @@ Power BI Dashboards
 | Data Quality | **Great Expectations**, custom PySpark checks |
 | Orchestration | **Fabric Pipelines** |
 | Visualization | **Power BI** |
-| Version Control | **GitHub** |
+| Version Control | **Azure DevOps Repos** |
 
 ---
 
